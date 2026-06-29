@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+<body>
+<h1>NFC 测试</h1>
+<div id="status">检测中...</div>
+<script>
+    const status = document.getElementById('status');
+    if ('nfc' in navigator) {
+        status.textContent = '✅ 此页面中 navigator.nfc 存在！';
+    } else {
+        status.textContent = '❌ 此页面中 navigator.nfc 不存在。';
+    }
+    console.log('navigator.nfc 是否存在:', 'nfc' in navigator);
+</script>
+</body>
+</html>
